@@ -1,13 +1,10 @@
-%%be name khoda
-%prozhe enteqal qodrat
-%Dr. Shamekhi
-%Mohammadreza Maleki
-%9818874
+%Motor B
 %%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$%%
-%motor dovom
+
 clc;
 close All;
-clear All;
+clear ;
+%% Sec.1 Initial Values
 
 M= 2355; 
 g=9.81;
@@ -21,6 +18,8 @@ r_d=0.375;
 d_fuel=755;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Sec.2 Tractive Force & Tractive Power of a 5-speed transmission
 
 friction_data=[0.0122 0.0124 0.0132 0.015 0.022 0.033];
 velocity_data=[0 50 100 150 200 250];
@@ -96,10 +95,11 @@ plot ( Velocity , Pwf , '--' )
 hold on
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%fuel consumption %
+%% sec.3 Calculating Fuel Consumption %
 
 %sfc=[300 300 325 290 305 330 360 365 400 440 ];
+%our data to Curve Fitting
+
 rpm1=1000:0.1:5500;
 p1 = -120.8;
 p2 = 28.89;
@@ -136,7 +136,7 @@ hold on;
 
  end
 
-% engine map %
+%% Sec.4 Engine Map 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
@@ -183,6 +183,8 @@ hold on
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 end
+
+%% Sec.5 Figures
 
 figure(4)
 
